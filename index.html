@@ -64,7 +64,6 @@
             padding: 100px 20px;
             text-align: center;
             color: #fff;
-            animation: fadeIn 1s ease-in-out;
         }
 
         .hero-content {
@@ -105,8 +104,25 @@
 
         .pricing h2 {
             font-size: 2.2rem;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             color: #1a73e8;
+        }
+
+        .pricing-description {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            color: #555;
+        }
+
+        .alert {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            padding: 15px;
+            background-color: #ffe5e5;
+            border-left: 5px solid #ff0000;
+            color: #d80000;
+            text-align: left;
+            font-weight: 600;
         }
 
         .pricing-container {
@@ -167,17 +183,22 @@
             background-color: #218838;
         }
 
-        /* Game Panel Section */
-        .game-panel {
-            padding: 80px 20px;
-            background-color: #fff;
-            text-align: center;
+        /* Recommended Package */
+        .package.recommended {
+            border: 3px solid #ffca28;
+            position: relative;
         }
 
-        .game-panel h2 {
-            font-size: 2.2rem;
-            margin-bottom: 40px;
+        .recommended-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background-color: #ffca28;
             color: #1a73e8;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
         }
 
         /* Footer */
@@ -187,39 +208,6 @@
             padding: 40px 20px;
             text-align: center;
         }
-
-        /* Animasi */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Live Chat Button */
-        .live-chat-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #28a745;
-            color: #fff;
-            padding: 15px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            z-index: 1000; /* Pastikan tombol di atas elemen lain */
-        }
-
-        .live-chat-btn:hover {
-            background-color: #218838;
-            transform: scale(1.05);
-        }
     </style>
 </head>
 <body>
@@ -228,8 +216,6 @@
         <ul class="nav-links">
             <li><a href="#">Beranda</a></li>
             <li><a href="#hosting">Hosting Game</a></li>
-            <li><a href="#game-panel">Game Panel</a></li>
-            <li><a href="#testimoni">Testimoni</a></li>
             <li><a href="#kontak">Kontak</a></li>
         </ul>
     </nav>
@@ -244,6 +230,16 @@
 
     <section id="hosting" class="pricing">
         <h2>Paket Hosting Game</h2>
+        <p class="pricing-description">
+            Layanan hosting game dari ZERO STORE cocok untuk server kecil hingga menengah.  
+            Perlu diperhatikan bahwa layanan ini memiliki beberapa keterbatasan berikut:
+        </p>
+        <div class="alert">
+            ❌ Tidak memiliki proteksi Anti-DDoS<br>
+            ❌ Bandwidth terbatas (bukan unlimited)<br>
+            📍 Lokasi server: Indonesia<br>
+            ⚠️ Tidak cocok untuk server besar
+        </div>
         <div class="pricing-container">
             <div class="package">
                 <h3>Basic</h3>
@@ -252,75 +248,103 @@
                     <li>1 vCPU</li>
                     <li>1 GB RAM</li>
                     <li>10 GB SSD</li>
+                    <li>Bandwidth: 1 TB</li>
+                    <li>Max Players: 20</li>
                 </ul>
                 <a href="#" class="order-btn">Pesan Sekarang</a>
             </div>
+            
             <div class="package">
-                <h3>Pro</h3>
+                <h3>Professional</h3>
                 <p class="price">Rp 10.000 / bulan</p>
                 <ul>
                     <li>2 vCPU</li>
                     <li>2 GB RAM</li>
                     <li>20 GB SSD</li>
+                    <li>Bandwidth: 2 TB</li>
+                    <li>Max Players: 40</li>
                 </ul>
                 <a href="#" class="order-btn">Pesan Sekarang</a>
             </div>
+            
             <div class="package">
-                <h3>Premium</h3>
+                <h3>Advanced</h3>
                 <p class="price">Rp 20.000 / bulan</p>
                 <ul>
                     <li>4 vCPU</li>
                     <li>4 GB RAM</li>
                     <li>40 GB SSD</li>
+                    <li>Bandwidth: 3 TB</li>
+                    <li>Max Players: 100</li>
                 </ul>
                 <a href="#" class="order-btn">Pesan Sekarang</a>
             </div>
+            
+            <div class="package">
+                <h3>Professional</h3>
+                <p class="price">Rp 35.000 / bulan</p>
+                <ul>
+                    <li>6 vCPU</li>
+                    <li>8 GB RAM</li>
+                    <li>60 GB SSD</li>
+                    <li>Bandwidth: 5 TB</li>
+                    <li>Max Players: 200</li>
+                </ul>
+                <a href="#" class="order-btn">Pesan Sekarang</a>
+            </div>
+            
+                      <div class="package recommended">
+                <div class="recommended-badge">Recommended</div>
+                <h3>Standard</h3>
+                <p class="price">Rp 50.000 / bulan</p>
+                <ul>
+                    <li>8 vCPU</li>
+                    <li>16 GB RAM</li>
+                    <li>200 GB SSD</li>
+                    <li>Bandwidth: 20 TB</li>
+                    <li>Max Players: 200</li>
+                </ul>
+                <a href="#" class="order-btn">Pesan Sekarang</a>
+                
+                
+            </div>
         </div>
+        
     </section>
 
-    <!-- Game Panel Section -->
-    <section id="game-panel" class="game-panel">
-        <h2>Game Panel Kontrol</h2>
-        <iframe src="https://panel.zerostore.com" width="100%" height="600px" style="border: none;"></iframe>
-    </section>
+<!-- Tambahkan ini di bagian footer -->
+<footer id="kontak">
+    <p>&copy; 2025 ZERO STORE - Hosting Game Berkualitas</p>
+    <div class="contact-info">
+        <p>✉️ Email: <a href="mailto:support@zerostore.me">support@zerostore.me</a></p>
+        <p>📱 WhatsApp: <a href="https://wa.me/6285136525093">085136525093</a></p>
+        <p>🎮 Discord: Coming Soon</p>
+    </div>
+</footer>
 
-    <section class="testimoni" id="testimoni">
-        <h2>Testimoni Pelanggan</h2>
-        <div class="testimoni-container">
-            <div class="testimonial-card">
-                <p>"Hostingnya sangat stabil, tidak pernah down. Sangat recommended!"</p>
-                <span>- John Doe</span>
-            </div>
-            <div class="testimonial-card">
-                <p>"Pelayanan cepat dan ramah. Performa server sangat memuaskan."</p>
-                <span>- Jane Smith</span>
-            </div>
-            <div class="testimonial-card">
-                <p>"Harga terjangkau dengan kualitas premium. Sangat worth it!"</p>
-                <span>- Michael Johnson</span>
-            </div>
-        </div>
-    </section>
+<!-- Tambahkan CSS ini di dalam tag style -->
+<style>
+    /* CSS untuk Kontak */
+    .contact-info {
+        margin-top: 25px;
+        line-height: 1.8;
+    }
 
-    <footer id="kontak">
-        <p>&copy; 2025 ZERO STORE - Hosting Game Berkualitas</p>
-    </footer>
+    .contact-info a {
+        color: #ffca28;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid transparent;
+    }
 
-    <!-- Live Chat Button -->
-    <a href="#" class="live-chat-btn" id="live-chat-btn">Live Chat</a>
+    .contact-info a:hover {
+        color: #fff;
+        border-bottom: 1px solid #ffca28;
+    }
 
-    <!-- Tidio Live Chat Integration -->
-    <script src="//code.tidio.co/hrdoxfslyybbszfizgw2ed3t8h19t2a6.js"></script>
-    <script>
-        // Penanganan error jika Tidio tidak terload
-        document.getElementById('live-chat-btn').addEventListener('click', function(event) {
-            event.preventDefault(); // Mencegah perilaku default link
-            if (typeof TidioChatApi !== 'undefined') {
-                TidioChatApi.open();
-            } else {
-                alert('Live Chat sedang tidak tersedia. Silakan coba lagi nanti.');
-            }
-        });
-    </script>
+    footer {
+        padding: 50px 20px; /* Ditambah padding untuk ruang lebih */
+    }
+</style>
 </body>
 </html>

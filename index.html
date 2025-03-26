@@ -3,348 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hosting Game - ZERO STORE</title>
+    <title>Maintenance | ZERO STORE</title>
     <style>
-        /* Reset & Global */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
-
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f2f4f8;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* Navbar */
-        .navbar {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background-color: #1a73e8;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: #fff;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-        }
-
-        .nav-links li {
-            margin-left: 25px;
-        }
-
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #ffca28;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #1a73e8, #4285f4);
-            padding: 100px 20px;
-            text-align: center;
-            color: #fff;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: auto;
-        }
-
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-
-        .cta-btn {
-            background-color: #ffca28;
-            color: #1a73e8;
-            padding: 15px 30px;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .cta-btn:hover {
-            background-color: #ffc107;
-            transform: scale(1.05);
-        }
-
-        /* Paket Hosting */
-        .pricing {
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .pricing h2 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            color: #1a73e8;
-        }
-
-        .pricing-description {
-            max-width: 800px;
-            margin: 0 auto 20px;
-            color: #555;
-        }
-
-        .alert {
-            max-width: 800px;
-            margin: 0 auto 30px;
-            padding: 15px;
-            background-color: #ffe5e5;
-            border-left: 5px solid #ff0000;
-            color: #d80000;
-            text-align: left;
-            font-weight: 600;
-        }
-
-        .pricing-container {
-            display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
-        }
-
-        .package {
-            background: #fff;
-            border-radius: 15px;
-            padding: 30px 20px;
-            width: 280px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .package:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .package h3 {
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-            color: #1a73e8;
-        }
-
-        .price {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #ff5722;
-        }
-
-        .package ul {
-            list-style: none;
-            margin-bottom: 25px;
-        }
-
-        .package ul li {
-            margin: 10px 0;
-        }
-
-        .order-btn {
-            display: inline-block;
-            background-color: #28a745;
+            align-items: center;
+            height: 100vh;
+            background-color: #1a1a1a;
             color: #fff;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
-
-        .order-btn:hover {
-            background-color: #218838;
-        }
-
-        /* Recommended Package */
-        .package.recommended {
-            border: 3px solid #ffca28;
-            position: relative;
-        }
-
-        .recommended-badge {
-            position: absolute;
-            top: -15px;
-            right: 20px;
-            background-color: #ffca28;
-            color: #1a73e8;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #1a73e8;
-            color: #fff;
-            padding: 40px 20px;
             text-align: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .countdown {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .contact {
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+        .contact a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">ZERO STORE</div>
-        <ul class="nav-links">
-            <li><a href="#">Beranda</a></li>
-            <li><a href="#hosting">Hosting Game</a></li>
-            <li><a href="#kontak">Kontak</a></li>
-        </ul>
-    </nav>
+    <h1>ZERO STORE Sedang dalam Pemeliharaan</h1>
+    <p>Kami sedang melakukan peningkatan sistem untuk layanan yang lebih baik.</p>
+    
+    <div class="countdown" id="countdown">7:00:00:00</div>
+    
+    <p id="endDate"></p>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Hosting Game Terbaik dengan Teknologi Modern</h1>
-            <p>Nikmati performa server yang stabil dan cepat untuk pengalaman gaming yang maksimal.</p>
-            <a href="#hosting" class="cta-btn">Lihat Paket</a>
-        </div>
-    </header>
-
-    <section id="hosting" class="pricing">
-        <h2>Paket Hosting Game</h2>
-        <p class="pricing-description">
-            Layanan hosting game dari ZERO STORE cocok untuk server kecil hingga menengah.  
-            Perlu diperhatikan bahwa layanan ini memiliki beberapa keterbatasan berikut:
-        </p>
-        <div class="alert">
-            ❌ Tidak memiliki proteksi Anti-DDoS<br>
-            ❌ Bandwidth terbatas (bukan unlimited)<br>
-            📍 Lokasi server: Indonesia<br>
-            ⚠️ Tidak cocok untuk server besar
-        </div>
-        <div class="pricing-container">
-            <div class="package">
-                <h3>Basic</h3>
-                <p class="price">Rp 5.000 / bulan</p>
-                <ul>
-                    <li>1 vCPU</li>
-                    <li>1 GB RAM</li>
-                    <li>10 GB SSD</li>
-                    <li>Bandwidth: 1 TB</li>
-                    <li>Max Players: 20</li>
-                </ul>
-                <a href="#" class="order-btn">Pesan Sekarang</a>
-            </div>
-            
-            <div class="package">
-                <h3>Professional</h3>
-                <p class="price">Rp 10.000 / bulan</p>
-                <ul>
-                    <li>2 vCPU</li>
-                    <li>2 GB RAM</li>
-                    <li>20 GB SSD</li>
-                    <li>Bandwidth: 2 TB</li>
-                    <li>Max Players: 40</li>
-                </ul>
-                <a href="#" class="order-btn">Pesan Sekarang</a>
-            </div>
-            
-            <div class="package">
-                <h3>Advanced</h3>
-                <p class="price">Rp 20.000 / bulan</p>
-                <ul>
-                    <li>4 vCPU</li>
-                    <li>4 GB RAM</li>
-                    <li>40 GB SSD</li>
-                    <li>Bandwidth: 3 TB</li>
-                    <li>Max Players: 100</li>
-                </ul>
-                <a href="#" class="order-btn">Pesan Sekarang</a>
-            </div>
-            
-            <div class="package">
-                <h3>Professional</h3>
-                <p class="price">Rp 35.000 / bulan</p>
-                <ul>
-                    <li>6 vCPU</li>
-                    <li>8 GB RAM</li>
-                    <li>60 GB SSD</li>
-                    <li>Bandwidth: 5 TB</li>
-                    <li>Max Players: 200</li>
-                </ul>
-                <a href="#" class="order-btn">Pesan Sekarang</a>
-            </div>
-            
-                      <div class="package recommended">
-                <div class="recommended-badge">Recommended</div>
-                <h3>Standard</h3>
-                <p class="price">Rp 50.000 / bulan</p>
-                <ul>
-                    <li>8 vCPU</li>
-                    <li>16 GB RAM</li>
-                    <li>200 GB SSD</li>
-                    <li>Bandwidth: 20 TB</li>
-                    <li>Max Players: 200</li>
-                </ul>
-                <a href="#" class="order-btn">Pesan Sekarang</a>
-                
-                
-            </div>
-        </div>
-        
-    </section>
-
-<!-- Tambahkan ini di bagian footer -->
-<footer id="kontak">
-    <p>&copy; 2025 ZERO STORE - Hosting Game Berkualitas</p>
-    <div class="contact-info">
-        <p>✉️ Email: <a href="mailto:support@zerostore.me">support@zerostore.me</a></p>
-        <p>📱 WhatsApp: <a href="https://wa.me/6285136525093">085136525093</a></p>
-        <p>🎮 Discord: Coming Soon</p>
+    <p>Silakan kembali lagi nanti atau hubungi kami untuk informasi lebih lanjut.</p>
+    
+    <div class="contact">
+        <p>Email: <a href="mailto:cs@zerostore.com">cs@zerostore.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/6285136525093">0851-3652-5093</a></p>
     </div>
-</footer>
 
-<!-- Tambahkan CSS ini di dalam tag style -->
-<style>
-    /* CSS untuk Kontak */
-    .contact-info {
-        margin-top: 25px;
-        line-height: 1.8;
-    }
+    <script>
+        function startCountdown(days) {
+            let countdownElement = document.getElementById("countdown");
+            let endDateElement = document.getElementById("endDate");
 
-    .contact-info a {
-        color: #ffca28;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        border-bottom: 1px solid transparent;
-    }
+            let now = new Date().getTime();
+            let endTime = now + (days * 24 * 60 * 60 * 1000);
 
-    .contact-info a:hover {
-        color: #fff;
-        border-bottom: 1px solid #ffca28;
-    }
+            let endDate = new Date(endTime);
+            let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+            endDateElement.textContent = "Perkiraan selesai pada: " + endDate.toLocaleDateString('id-ID', options);
 
-    footer {
-        padding: 50px 20px; /* Ditambah padding untuk ruang lebih */
-    }
-</style>
+            let interval = setInterval(function () {
+                let now = new Date().getTime();
+                let timeLeft = endTime - now;
+
+                let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                let hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                countdownElement.textContent = 
+                    (days < 10 ? "0" + days : days) + ":" +
+                    (hours < 10 ? "0" + hours : hours) + ":" +
+                    (minutes < 10 ? "0" + minutes : minutes) + ":" +
+                    (seconds < 10 ? "0" + seconds : seconds);
+
+                if (timeLeft < 0) {
+                    clearInterval(interval);
+                    countdownElement.textContent = "Selesai!";
+                }
+            }, 1000);
+        }
+
+        // Set countdown 1 minggu (7 hari)
+        startCountdown(7);
+    </script>
 </body>
 </html>

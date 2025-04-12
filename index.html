@@ -1,83 +1,74 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZERO STORE - Sedang dalam Perbaikan</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-        body {
-            background: #121212;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-            padding: 20px;
-        }
-        .container {
-            max-width: 600px;
-        }
-        .icon {
-            font-size: 80px;
-            color: #ffcc00;
-            animation: blink 1.5s infinite alternate;
-        }
-        @keyframes blink {
-            0% { opacity: 0.8; }
-            100% { opacity: 1; }
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin: 20px 0;
-        }
-        p {
-            font-size: 1.2rem;
-            opacity: 0.8;
-            margin-bottom: 20px;
-        }
-        .contact {
-            margin-top: 20px;
-        }
-        .contact a {
-            display: block;
-            margin: 10px 0;
-            font-size: 1.1rem;
-            text-decoration: none;
-            color: #00c6ff;
-            transition: 0.3s;
-        }
-        .contact a:hover {
-            color: #0072ff;
-        }
-        .footer {
-            margin-top: 30px;
-            font-size: 0.9rem;
-            opacity: 0.7;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Album Foto Otomatis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #111;
+      color: #fff;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .album-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding-right: 10px;
+    }
+
+    .album-container::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .album-container::-webkit-scrollbar-thumb {
+      background: #444;
+      border-radius: 10px;
+    }
+
+    .photo {
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      background-color: #222;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+    }
+
+    .photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
 </head>
 <body>
+  <h1>Album Foto</h1>
+  <div class="album-container">
+    <?php
+      $folder = "uploads/";
+      $gambar = glob($folder . "*.{jpg,jpeg,png,gif,webp}", GLOB_BRACE);
 
-    <div class="container">
-        <div class="icon">⚠️</div>
-        <h1>ZERO STORE Sedang Dalam Perbaikan</h1>
-        <p>Kami sedang melakukan peningkatan sistem untuk memberikan layanan yang lebih baik. Mohon bersabar dan kembali lagi nanti.</p>
+      // Sort berdasarkan waktu upload (paling baru di atas)
+      usort($gambar, function($a, $b) {
+        return filemtime($b) - filemtime($a);
+      });
 
-        <div class="contact">
-            <a href="https://wa.me/6285141145301" target="_blank">📱 WhatsApp: +62 851-4114-5301</a>
-            <a href="mailto:support@zerostore.me">✉ Email: support@zerostore.me</a>
-        </div>
-
-        <p class="footer">&copy; 2025 ZERO STORE. Semua Hak Dilindungi.</p>
-    </div>
-
+      foreach ($gambar as $file) {
+        echo "<div class='photo'><img src='$file' alt='Foto'></div>";
+      }
+    ?>
+  </div>
 </body>
 </html>

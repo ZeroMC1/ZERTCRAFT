@@ -1,56 +1,166 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog Foto</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZeroHentai - Peringatan Usia</title>
+  <link href="https://i.top4top.io/p_3390j5a760.png" rel="stylesheet">
+  
   <style>
     body {
-      font-family: sans-serif;
-      margin: 20px;
-      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: url('https://a.top4top.io/p_33908u68z0.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
     }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 16px;
-    }
-    .photo {
-      background: white;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+    .container {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(255, 0, 179, 0.5);
       text-align: center;
+      max-width: 90%;
+      width: 600px;
+      animation: fadeInUp 1.2s ease-out;
     }
-    .photo img {
-      width: 100%;
-      height: auto;
-      border-radius: 4px;
+
+    h1 {
+      font-family: 'Press Start 2P', cursive;
+      color: #ff66cc;
+      font-size: 20px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #ff66cc;
     }
-    .photo-name {
-      margin-top: 8px;
+
+    .brand {
+      font-size: 28px;
       font-weight: bold;
+      color: #ffc0f5;
+      margin-bottom: 10px;
+      text-shadow: 0 0 8px #ff0080;
+    }
+
+    .no-ads-banner {
+      margin: 15px 0;
+      font-size: 16px;
+      font-weight: bold;
+      color: #00ffcc;
+      text-shadow: 0 0 10px #00ffe0;
+      animation: glowText 2s ease-in-out infinite alternate;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #ccc;
+      margin: 10px 0;
+    }
+
+    .warning {
+      font-weight: bold;
+      font-size: 16px;
+      color: #ff4d4d;
+      margin-top: 15px;
+      animation: blink 1s infinite;
+    }
+
+    .btn {
+      margin: 12px 8px;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      font-family: 'Orbitron', sans-serif;
+      transition: 0.3s ease;
+    }
+
+    .btn-enter {
+      background: linear-gradient(145deg, #ff1493, #c71585);
+      color: white;
+      box-shadow: 0 0 12px #ff69b4;
+    }
+
+    .btn-enter:hover {
+      background: #ff007f;
+    }
+
+    .btn-support {
+      background: linear-gradient(to right, #ffd700, #ff9900);
+      color: #000;
+      box-shadow: 0 0 10px #ffcc00;
+    }
+
+    .btn-support:hover {
+      background: #e6ac00;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 11px;
+      color: #aaa;
+    }
+
+    footer a {
+      color: #ff66cc;
+      text-decoration: none;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+
+    @keyframes glowText {
+      from { text-shadow: 0 0 10px #00ffe0; }
+      to { text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc; }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 16px;
+      }
+      .btn {
+        font-size: 12px;
+        padding: 10px 18px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Galeri Foto</h1>
-  <div class="gallery">
-    <!-- FOTO 1-70 -->
-    <!-- Ganti link gambar src dengan milikmu -->
-    <!-- Contoh pakai placeholder: https://via.placeholder.com/200 -->
-    <!-- Bisa diganti juga dengan path lokal seperti src="images/foto1.jpg" -->
-    <!-- Berikut contoh untuk 3 pertama: -->
-    <div class="photo">
-      <img src="666.jpg" alt="Foto 1">
-      <div class="photo-name">Foto 1</div>
-    </div>
-    <div class="photo">
-      <img src="999.jpg" alt="Foto 2">
-      <div class="photo-name">Foto 2</div>
-    </div>
-    <div class="photo">
-      <img src="https://via.placeholder.com/200" alt="Foto 3">
-      <div class="photo-name">Foto 3</div>
-    </div>
-    <!-- Dan seterusnya sampai 70 -->
+  <div class="container">
+    <div class="brand">ZeroHentai</div>
+    <h1>PERINGATAN 18+</h1>
+    <p class="warning">Konten ini hanya untuk dewasa (18+)</p>
+    <div class="no-ads-banner">NONTON HENTAI TANPA IKLAN!</div>
+    <p>ZeroHentai menyajikan konten anime dewasa termasuk ilustrasi dan video eksplisit.</p>
+    <p>Jika kamu di bawah umur atau tidak nyaman, harap keluar dari situs ini.</p>
+    <p>Dengan mengklik "Masuk", kamu menyatakan sudah berusia 18+.</p>
+
+    <button class="btn btn-enter" onclick="location.href='masuk.html'">Saya Berusia 18+</button>
+    <button class="btn btn-support" onclick="window.open('https://sociabuzz.com/zxcf/tribe', '_blank')">Dukung di Sociabuzz</button>
+
+    <footer>
+      <p>© ZeroHentai | Powered by <a href="#">ZERO STORE</a></p>
+    </footer>
+  </div>
+</body>
+</html>

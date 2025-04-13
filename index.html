@@ -2,73 +2,55 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Album Foto Otomatis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog Foto</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background-color: #111;
-      color: #fff;
+      font-family: sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
     }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
     }
-
-    .album-container {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-height: 90vh;
-      overflow-y: auto;
-      padding-right: 10px;
-    }
-
-    .album-container::-webkit-scrollbar {
-      width: 10px;
-    }
-
-    .album-container::-webkit-scrollbar-thumb {
-      background: #444;
-      border-radius: 10px;
-    }
-
     .photo {
-      width: 100%;
-      max-width: 600px;
-      margin: auto;
-      background-color: #222;
+      background: white;
+      padding: 10px;
       border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
     }
-
     .photo img {
       width: 100%;
       height: auto;
-      display: block;
+      border-radius: 4px;
+    }
+    .photo-name {
+      margin-top: 8px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <h1>Album Foto</h1>
-  <div class="album-container">
-    <?php
-      $folder = "uploads";
-      $gambar = glob($folder . "*.{jpg,jpeg,png,gif,webp}", GLOB_BRACE);
-
-      // Sort berdasarkan waktu upload (paling baru di atas)
-      usort($gambar, function($a, $b) {
-        return filemtime($b) - filemtime($a);
-      });
-
-      foreach ($gambar as $file) {
-        echo "<div class='photo'><img src='$file' alt='Foto'></div>";
-      }
-    ?>
-  </div>
-</body>
-</html>
+  <h1>Galeri Foto</h1>
+  <div class="gallery">
+    <!-- FOTO 1-70 -->
+    <!-- Ganti link gambar src dengan milikmu -->
+    <!-- Contoh pakai placeholder: https://via.placeholder.com/200 -->
+    <!-- Bisa diganti juga dengan path lokal seperti src="images/foto1.jpg" -->
+    <!-- Berikut contoh untuk 3 pertama: -->
+    <div class="photo">
+      <img src="666.jpg" alt="Foto 1">
+      <div class="photo-name">Foto 1</div>
+    </div>
+    <div class="photo">
+      <img src="999.jpg" alt="Foto 2">
+      <div class="photo-name">Foto 2</div>
+    </div>
+    <div class="photo">
+      <img src="https://via.placeholder.com/200" alt="Foto 3">
+      <div class="photo-name">Foto 3</div>
+    </div>
+    <!-- Dan seterusnya sampai 70 -->

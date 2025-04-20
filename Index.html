@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Selamat Datang di ZEROSTORE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: url('minecraft.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      backdrop-filter: brightness(0.6);
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #38bdf8;
+      text-shadow: 0 0 10px #38bdf8;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+      max-width: 600px;
+      margin-top: 15px;
+    }
+
+    a.btn {
+      margin-top: 30px;
+      display: inline-block;
+      background: #3b82f6;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    a.btn:hover {
+      background: #2563eb;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .overlay {
+        margin: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Selamat Datang di ZEROSTORE!</h1>
+    <p>Kami menyediakan jasa setup server Minecraft lengkap dengan plugin, lobby, BungeeCord, Skywars, dan banyak lagi. Siap melayani sesuai request!</p>
+    <a href="paket.html" class="btn">Lihat Paket Setup Server</a>
+  </div>
+</body>
+</html>
